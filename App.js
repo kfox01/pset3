@@ -5,6 +5,7 @@ import LoginComponent from './LoginComponent';
 import AddComponent from './AddComponent';
 import EditComponent from './EditComponent';
 import DeleteComponent from './DeleteComponent';
+import ListComponent from './ListComponent';
 
 function App() {
   const [username, setUsername] = useState(null);
@@ -50,13 +51,7 @@ function App() {
       <AddComponent onSongAdditon={handleSongAddition} />
       <EditComponent onSongEdit={handleSongEdit} />
       <DeleteComponent onSongDelete={handleSongDelete} />
-
-      {/* Display the songs in a list */}
-      <ul>
-        {songs.map(song => (
-          <li key={song.id}>{song.title} by {song.artist}</li>
-        ))}
-      </ul>
+      <ListComponent songs={songs} />
     </div>
   );
 }
