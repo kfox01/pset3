@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import RegisterComponent from './RegisterComponent';
-import LoginComponent from './loginComponent';
+import LoginComponent from './LoginComponent';
 import AddComponent from './AddComponent';
 import EditComponent from './EditComponent';
 import DeleteComponent from './DeleteComponent';
@@ -28,11 +28,11 @@ function App() {
     return (
       <div className="App">
         <LoginComponent onLogin={() => setIsAuthenticated(true)} />
-        <RegisterComponent 
+        <RegisterComponent
           onRegister={(user) => {
             setUsername(user);
             setIsAuthenticated(true);
-          }} 
+          }}
           onError={setErrorMessage}
         />
         {errorMessage && <p className="error-message">{errorMessage}</p>}
@@ -46,7 +46,7 @@ function App() {
         <h1>SongStars</h1>
         {username && <p>Welcome, {username}!</p>}
       </header>
-      
+
       <AddComponent onSongAdditon={handleSongAddition} />
       <EditComponent onSongEdit={handleSongEdit} />
       <DeleteComponent onSongDelete={handleSongDelete} />
