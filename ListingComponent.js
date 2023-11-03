@@ -5,7 +5,7 @@ import { Bar } from 'react-chartjs-2';
 const [songs, setSongs] = useState([]);
 
 useEffect(() => {
-  axios.get('http://localhost/index.php/song/getAllSongs')
+  axios.get('http://localhost/index.php/song/allSongs')
     .then((response) => {
       setSongs(response.data);
     })
