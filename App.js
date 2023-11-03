@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import './App.css';
 import RegisterComponent from './RegisterComponent';
@@ -50,13 +48,14 @@ function App() {
         {username && <p>Welcome, {username}!</p>}
       </header>
 
+      <ListComponent songs={songs} />
       <AddComponent onSongAdditon={handleSongAddition} />
       <EditComponent onSongEdit={handleSongEdit} />
       <DeleteComponent onSongDelete={handleSongDelete} />
-      <ListComponent songs={songs} />
+
     </div>
   );
 }
 
 export default App;
->>>>>>> origin/debug
+
